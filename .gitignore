@@ -1,0 +1,44 @@
+# ---- Secrets and personal settings: never commit these ----
+.env
+.env.*
+!.env.example
+visionsync-firebase.json
+*firebase-adminsdk*.json
+*service-account*.json
+phone_app/android/app/google-services.json
+phone_app/android/key.properties
+*.jks
+*.keystore
+
+# ---- Models (large; downloaded or copied onto the Jetson) ----
+voice_assistant/models/
+voice_assistant/vosk-model/
+*.onnx
+*.onnx.json
+*.gguf
+
+# ---- Personal data and local state (tasks, reminders, memories) ----
+*.db
+*.sqlite
+*.sqlite3
+backup-*/
+visionsync-update/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- Flutter / Android build output ----
+phone_app/build/
+phone_app/.dart_tool/
+phone_app/.flutter-plugins
+phone_app/.flutter-plugins-dependencies
+phone_app/android/.gradle/
+*.apk
+*.aab
+
+# The mirror's Google sign-in (kept on the Jetson only)
+client_secret*.json
+google_token.json
