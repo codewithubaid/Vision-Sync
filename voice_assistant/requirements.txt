@@ -1,0 +1,15 @@
+# Voice assistant (Python 3.8 or newer). setup_voice.sh installs these into
+# their own folder (~/.venvs/visionsync-voice), so JetPack's Python is untouched.
+requests
+python-dotenv
+numpy
+scipy
+sounddevice
+vosk
+faster-whisper
+fastapi
+uvicorn
+pydantic
+pyttsx3
+pypdf
+python-docx

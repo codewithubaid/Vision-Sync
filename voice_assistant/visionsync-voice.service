@@ -1,0 +1,17 @@
+[Unit]
+Description=VisionSync voice assistant (Hey Vision, speech, AI, reminders, chat API)
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=@HERE@
+Environment=PYTHONUNBUFFERED=1
+# Chat API on 127.0.0.1:8000 (phone chat goes through the camera server), the
+# voice loop and spoken reminders. Restarts by itself (NFR-Q1, NFR-Q5).
+ExecStart=@VENV@/bin/python -m uvicorn api_server:app --host 127.0.0.1 --port 8000 --log-level warning
+Restart=always
+RestartSec=3
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,5 @@
+/* VisionSync - copy to ~/MagicMirror/css/custom.css
+ * Pure black background (black = see-through behind the two-way mirror)
+ * and no mouse pointer. Everything else is styled by MMM-VisionSync/vs.css. */
+:root { --color-background: #000; }
+html, body { background: #000; cursor: none; }

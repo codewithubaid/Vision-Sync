@@ -1,0 +1,18 @@
+[Unit]
+Description=VisionSync Wi-Fi setup mode (hotspot + QR code when there is no network)
+After=NetworkManager.service visionsync-hub.service
+Wants=NetworkManager.service
+
+[Service]
+Type=simple
+# Root: it changes network settings through NetworkManager.
+User=root
+EnvironmentFile=-/home/visionsync/visionsync/.env
+ExecStart=/usr/bin/python3 /home/visionsync/visionsync/wifi/visionsync_wifi.py
+KillSignal=SIGTERM
+TimeoutStopSec=15
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+push_devices.json
+*.log
+*.log.1
+__pycache__/

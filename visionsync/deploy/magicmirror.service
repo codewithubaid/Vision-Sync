@@ -1,0 +1,16 @@
+[Unit]
+Description=MagicMirror2 server (VisionSync dashboard)
+After=network.target visionsync-hub.service
+
+[Service]
+Type=simple
+User=visionsync
+WorkingDirectory=/home/visionsync/MagicMirror
+# Server only: the screen is drawn by Chromium (deploy/kiosk.sh), so one
+# browser handles both MagicMirror and the hub's fallback page.
+ExecStart=/usr/bin/env node serveronly
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

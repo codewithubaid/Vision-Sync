@@ -1,0 +1,8 @@
+{
+  "name": "mmm-visionsync",
+  "version": "1.0.0",
+  "description": "VisionSync smart mirror dashboard widgets for MagicMirror2 (clock, weather, calendar, system status, voice assistant, security alerts)",
+  "main": "MMM-VisionSync.js",
+  "license": "MIT",
+  "dependencies": {}
+}

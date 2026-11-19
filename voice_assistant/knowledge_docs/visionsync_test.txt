@@ -1,0 +1,9 @@
+﻿VisionSync is an AI-powered smart mirror.
+
+VisionSync uses Qwen as its primary language model.
+
+The final hardware is NVIDIA Jetson Orin Nano with 8GB RAM and 128GB NVMe storage.
+
+VisionSync uses Vosk for wake-word detection and Whisper for speech recognition.
+
+The assistant supports voice commands, personal memory, tasks, and local document retrieval.

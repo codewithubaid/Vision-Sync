@@ -1,0 +1,27 @@
+name: glass_connect
+description: Glass Connect - remote control for your smart mirror.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.8.0
+  http: ^1.2.2
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+  flutter_phone_direct_caller: ^2.1.1
+  # Patched MJPEG viewer from the VisionSync camera project (local copy).
+  mjpeg_stream:
+    path: third_party/mjpeg_stream
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

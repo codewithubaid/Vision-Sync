@@ -1,0 +1,7 @@
+# The camera server needs only these. On the Jetson, OpenCV usually comes with
+# JetPack (python3-opencv); install the rest with:  pip3 install -r requirements.txt
+numpy
+opencv-python
+# Fall detection by body pose (SRS UC-3). Without it the server still runs and
+# uses the simpler shape-based check; /status then shows "fall_detector": "shape".
+mediapipe

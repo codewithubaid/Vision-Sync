@@ -1,0 +1,6 @@
+This archive was generated from the original Windows Desktop camera_app.
+Legacy stream: port 5000 /video_feed (motion candidates only).
+Separate authenticated backend: backend/main.py (different API).
+Pose model is included only if present in backend/models/.
+Live webcam, Flutter, Firebase and emergency features need real-device tests.
+Keep credentials out of source; never expose legacy HTTP publicly.

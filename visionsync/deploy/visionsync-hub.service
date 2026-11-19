@@ -1,0 +1,17 @@
+[Unit]
+Description=VisionSync hub (dashboard data + integration)
+After=network.target
+
+[Service]
+Type=simple
+User=visionsync
+WorkingDirectory=/home/visionsync/visionsync
+ExecStart=/usr/bin/python3 /home/visionsync/visionsync/hub/visionsync_hub.py
+# SIGTERM = clean shutdown (NFR-S3). Restart by itself after a crash (NFR-Q1).
+KillSignal=SIGTERM
+TimeoutStopSec=10
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
